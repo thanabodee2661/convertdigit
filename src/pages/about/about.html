@@ -7,5 +7,21 @@
 </ion-header>
 
 <ion-content padding>
-
+  <h2>Welcome to PIPEs in Ionic</h2>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Country money:
+      </ion-label>
+      <ion-input type="number" [(ngModel)]="num" floating value=""></ion-input>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-label>format:</ion-label>
+      <ion-input type="text" floating readonly value="{{num|number}}"></ion-input>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-label>string:</ion-label>
+      <ion-input type="text" floating readonly value="{{num|convert}}"></ion-input>
+    </ion-item>
+  </ion-list>
 </ion-content>

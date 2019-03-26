@@ -5,13 +5,28 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <h2>Welcome to PIPEs in Ionic</h2>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Country Code:
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="countryCode" floating value=""></ion-input>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-label>Country name in English:</ion-label>
+      <ion-input type="text" floating readonly value="{{countryCode|uppercase|countryCodeToNameInEng}}"></ion-input>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-label>Country name in Thai:</ion-label>
+      <ion-input type="text" floating readonly value="{{countryCode|uppercase|countryCodeToNameInThai}}"></ion-input>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-label>สกุลเงิน:</ion-label>
+      <ion-input type="text" floating readonly value="{{countryCode|uppercase|currentcy}}"></ion-input>
+    </ion-item>
+    <ion-item text-center>
+      <ion-img style="background: transparent !important" width="200" height="200" src="../assets/imgs/6.flag-imgs/{{countryCode|uppercase|countryCodeToNameInEng|countryNameToFlagImageFile}}"></ion-img>
+    </ion-item>
+  </ion-list>
 </ion-content>

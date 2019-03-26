@@ -1,5 +1,7 @@
 {
   "name": "PipeFeature",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

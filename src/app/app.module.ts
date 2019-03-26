@@ -10,6 +10,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CountryCodeToNameInEngPipe } from '../pipes/country-code-to-name-in-eng/country-code-to-name-in-eng';
+import { CountryCodeToNameInThaiPipe } from '../pipes/country-code-to-name-in-thai/country-code-to-name-in-thai';
+import { CountryNameToFlagImageFilePipe } from '../pipes/country-name-to-flag-image-file/country-name-to-flag-image-file';
+import { CurrentcyPipe } from '../pipes/currentcy/currentcy';
+import { ConvertPipe } from '../pipes/convert/convert';
+import { DatePicker } from '@ionic-native/date-picker';
 
 @NgModule({
   declarations: [
@@ -17,7 +23,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    CountryCodeToNameInEngPipe,
+    CountryCodeToNameInThaiPipe,
+    CountryNameToFlagImageFilePipe,
+    CurrentcyPipe,
+    ConvertPipe
   ],
   imports: [
     BrowserModule,
@@ -34,7 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatePicker
   ]
 })
 export class AppModule {}

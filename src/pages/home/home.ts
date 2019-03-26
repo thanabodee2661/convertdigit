@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  countryCode: string;
+
   constructor(public navCtrl: NavController) {
 
   }
