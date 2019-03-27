@@ -16,6 +16,7 @@ import { CountryNameToFlagImageFilePipe } from '../pipes/country-name-to-flag-im
 import { CurrentcyPipe } from '../pipes/currentcy/currentcy';
 import { ConvertPipe } from '../pipes/convert/convert';
 import { DatePicker } from '@ionic-native/date-picker';
+import { FormatPipe } from '../pipes/format/format';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DatePicker } from '@ionic-native/date-picker';
     CountryCodeToNameInThaiPipe,
     CountryNameToFlagImageFilePipe,
     CurrentcyPipe,
-    ConvertPipe
+    ConvertPipe,
+    FormatPipe
   ],
   imports: [
     BrowserModule,

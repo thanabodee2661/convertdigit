@@ -4,17 +4,20 @@ import { CountryCodeToNameInThaiPipe } from './country-code-to-name-in-thai/coun
 import { CountryCodeToNameInEngPipe } from './country-code-to-name-in-eng/country-code-to-name-in-eng';
 import { CurrentcyPipe } from './currentcy/currentcy';
 import { ConvertPipe } from './convert/convert';
+import { FormatPipe } from './format/format';
 @NgModule({
 	declarations: [CountryNameToFlagImageFilePipe,
     CountryCodeToNameInThaiPipe,
     CountryCodeToNameInEngPipe,
     CurrentcyPipe,
-    ConvertPipe],
+    ConvertPipe,
+    FormatPipe],
 	imports: [],
 	exports: [CountryNameToFlagImageFilePipe,
     CountryCodeToNameInThaiPipe,
     CountryCodeToNameInEngPipe,
     CurrentcyPipe,
-    ConvertPipe]
+    ConvertPipe,
+    FormatPipe]
 })
 export class PipesModule {}
